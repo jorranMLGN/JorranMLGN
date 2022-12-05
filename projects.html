@@ -1,0 +1,249 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="css/codestyle.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="icon">
+        <a href="index.html"><img src="pic/avatar.png" alt="Avatar" /></a>
+      </div>
+      <div class="avatar">
+        <img src="pic/logo.png" alt="logo" />
+      </div>
+      <nav>
+        <div class="dropdown flex1">
+          <script src="js/dropdown.js"></script>
+          <button onclick="toggleShowClass()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="projects.html">Projects</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="gridBlockContainer">
+        <div class="mainBlock">
+          <h1>Java Mastermind</h1>
+          <pre class="prettyprint" style="overflow: scroll; height: 380px">
+                    <code>
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int min = 0;
+        int max = 5;
+        int random_int;
+        Integer[] answer = {0,0,0,0};
+        Integer[] inputs = {0,0,0,0};
+
+        for (int j = 0; j <= 3; j++) {
+            random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
+            answer[j] = random_int;
+        }
+//        System.out.println(Arrays.toString(answer));
+        for (int j = 0; j <= 9; j++) {
+            System.out.println("Yellow = 0 | Green = 1 | Purple = 2 | Red = 3 Blue  = 4 | Orange = 5");
+
+            for (int f = 0; f <= 3; f++) {
+                System.out.println("keuze voor: " + (f + 1));
+                String input = scanner.nextLine();
+                int intInput = Integer.parseInt(input);
+                inputs[f] = intInput;
+            }
+
+            String[] roodGeel = new String[4];
+            if(Arrays.equals(inputs, answer))
+            {
+                break;
+            }
+            else
+            {
+                for(int l = 0; l < inputs.length; l++)
+                {
+                    if(Arrays.asList(inputs).contains(answer[l]))
+                    {
+                        if(inputs[l]==(answer[l]))
+                        {
+                            roodGeel[l] = "wit";
+                        }
+                        else
+                        {
+                            roodGeel[l] = "zwart";
+                        }
+                    }
+                }
+                for(int k = 0; k < roodGeel.length; k++)
+                {
+                    System.out.println(roodGeel[k]);
+                }
+            }
+        }
+        if(Arrays.equals(inputs, answer)) {
+            System.out.println("gewonnen!");
+        } else {
+            System.out.println("");
+            System.out.println("verloren!");
+        }
+    }
+}
+                    </code>
+                    </pre>
+        </div>
+        <div class="textBlockJM">
+          <h3>
+            Een Mastermind game in Java volledig speelbaar in je eigen terminal!
+          </h3>
+        </div>
+        <div class="mainBlock2">
+          <h1>JavaScript Discord bot</h1>
+          <pre class="prettyprint" style="overflow: scroll; height: 380px">
+                    <code>
+const { Client, GatewayIntentBits } = require("discord.js");
+require("dotenv/config");
+const axios = require("axios");
+let L;
+let price;
+let react = 0;
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMessageReactions,
+    ],
+});
+
+client.on("ready", () => {
+    console.log("The bot is ready");
+});
+
+client.on("messageCreate", async (message) => {
+    if (message.content === "Tanki") {
+        async function getData() {
+            try {
+                react++;
+
+                const response = await axios.get(
+                    "https://creativecommons.tankerkoenig.de/json/list.php?lat=51.790101&lng=5.999217&rad=4&sort=price&type=e10&apikey=dbd529d9-3281-0d15-ffa8-378748fa0b3d"
+                );
+
+                const reply1 = await message.reply(
+                    response.data.stations[1].name +
+                        response.data.stations[1].place +
+                        " €" +
+                        JSON.stringify(response.data.stations[1].price)
+                );
+                const reply2 = await message.reply(
+                    response.data.stations[2].name +
+                        response.data.stations[2].place +
+                        " €" +
+                        JSON.stringify(response.data.stations[2].price)
+                );
+
+                const reply3 = await message.reply(
+                    response.data.stations[3].name +
+                        response.data.stations[3].place +
+                        " €" +
+                        JSON.stringify(response.data.stations[3].price)
+                );
+                if (
+                    response.data.stations[1].price >
+                        response.data.stations[2].price ||
+                    response.data.stations[1].price >
+                        response.data.stations[3].price
+                ) {
+                    reply1.react("✅");
+                    price = response.data.stations[1].price;
+                }
+                if (
+                    response.data.stations[2].price >
+                        response.data.stations[1].price ||
+                    response.data.stations[2].price >
+                        response.data.stations[3].price
+                ) {
+                    reply2.react("✅");
+                    price = response.data.stations[1].place;
+                }
+                if (
+                    response.data.stations[3].price >
+                        response.data.stations[1].price ||
+                    response.data.stations[3].price >
+                        response.data.stations[0].price
+                ) {
+                    reply3.react("✅");
+                    price = response.data.stations[3].price;
+                }
+
+                const reply66 = await message.reply("Hoeveel liter?");
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getData();
+    }
+    if (react == 1) {
+        if (!isNaN(message.content)) {
+            L = parseInt(message.content);
+            L = L * price;
+            const reply5 = await message.reply("€ " + String(L));
+            reply5.react("✅");
+            react--;
+        }
+    }
+});
+
+client.login(process.env.TOKEN);
+
+                        </code>
+                    </pre>
+        </div>
+        <div class="textBlockJS">
+          <h3>
+            Een Discord Bot die automatisch tankprijzen van tankstions fetched
+            en ze vergelijkt met elkaar waar hij vervolgens de goedkoopste van
+            kiest.
+          </h3>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>© Jorran - Niet bedoelt voor reproductie!</p>
+    </footer>
+  </body>
+</html>

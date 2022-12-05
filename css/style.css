@@ -1,0 +1,221 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  padding: 0;
+}
+/* Het logo / Avatar van site */
+
+header img {
+  width: 100%;
+  height: 100%;
+  margin-left: 30px;
+}
+.icon {
+  width: 80px;
+  height: auto;
+}
+.avatar {
+  width: 400px;
+}
+
+/* alles wat gelinkt word aan de body */
+
+body {
+  width: 100%;
+  /* background: #eaeaea; */
+  /* background: -webkit-linear-gradient(0deg, #ffffff 0%, #8d8d8d 100%); */
+  background: linear-gradient(100 deg, #ffffff 0%, #bcbcbc 50%);
+  /* background: linear-gradient(140deg, #dfdfdf93 10 0%, #5f5e5e 100%); */
+}
+/* Header balk */
+
+header {
+  max-width: 100%;
+  height: 130px;
+  /* background: #5a5c5e; */
+  /* background: -webkit-linear-gradient(270deg, #3d6d9d 0%, #416a94 100%); */
+  /* background: linear-gradient(270deg, #ac57da93 0%, #ffffff81 50%); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  /* box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.238); */
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #7d7d7dee;
+  color: white;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  font-family: "Lily Script One", cursive;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 40px;
+}
+/* Dropdown button op hover & focus */
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #7d7d7d97;
+}
+
+/* De container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content  */
+.dropdown-content {
+  opacity: 0;
+  scale: 0;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+  transition: opacity 1s;
+}
+
+/* Links in de dropdown */
+.dropdown-content a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+
+/* Change color van dropdown links op hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.768);
+}
+
+/* Javascript functie toggle */
+.show {
+  opacity: 1 !important;
+  scale: 1;
+  transition: opacity 1s;
+}
+/* Text in menu */
+a:hover {
+  color: rgba(181, 219, 214, 0.681);
+  scale: 0.95;
+}
+a:active {
+  color: rgba(181, 219, 214, 0.548);
+}
+
+/* Text opmaak */
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 60px !important;
+  font-weight: bolder !important;
+  margin-top: 30px !important;
+  text-align: left;
+  flex: 1 1 0%;
+  margin: auto;
+  /* line-height: 1.8; */
+  text-shadow: 2px 2px 50px #848484;
+}
+
+h2 {
+  color: white;
+  font-size: 60px !important;
+  margin-left: 35px !important;
+  font-weight: bolder !important;
+  font-family: "Inter", sans-serif;
+}
+
+/* De footer balk die onder aan de pagina hangt */
+
+.gridBlockContainer {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 40px 40px 500px 40px 200px;
+  grid-template-columns: 45% 45%;
+  column-gap: 50px;
+}
+.mainBlock {
+  width: 100%;
+  height: 30vh;
+  border-radius: 20px;
+  grid-column: 1;
+  grid-row: 0;
+}
+.mainBlock2 {
+  width: 100%;
+  height: 30vh;
+  border-radius: 20px;
+  grid-column: 2;
+  grid-row: 0;
+}
+.textBlockJS {
+  grid-column: 2;
+  grid-row: 4;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  border: solid rgba(255, 255, 255, 0.275);
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+}
+.textBlockJM {
+  grid-column: 1;
+  grid-row: 4;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  border: solid rgba(255, 255, 255, 0.275);
+  width: 100%;
+  height: 140px;
+  border-radius: 20px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #bc48ff;
+  background: -webkit-linear-gradient(90deg, #bc48ff 10%, #416a94 100%);
+  background: linear-gradient(90deg, #6a6a6a 10%, #767676 100%);
+  color: rgb(252, 252, 252);
+  text-align: center;
+  height: 30px;
+  z-index: 3;
+}
+
+pre {
+  margin: auto;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  border: solid rgba(255, 255, 255, 0.275);
+  box-shadow: 0 0 32px 10px #dddddd;
+}

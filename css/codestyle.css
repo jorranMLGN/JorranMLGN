@@ -1,0 +1,114 @@
+/**
+ * /*
+ * Derived from einaros's Sons of Obsidian theme at
+ * http://studiostyl.es/schemes/son-of-obsidian by
+ * Alex Ford of CodeTunnel:
+ * http://CodeTunnel.com/blog/post/71/google-code-prettify-obsidian-theme
+ *
+ * @format
+ */
+
+.str {
+  color: #0062ec;
+}
+.kwd {
+  color: #fb01ff;
+}
+.com {
+  color: #4298c3;
+}
+.typ {
+  color: #0600a8;
+}
+.lit {
+  color: #a9a1a1;
+}
+.pun {
+  color: #000000;
+}
+.pln {
+  color: #000000;
+}
+.tag {
+  color: #8163c7;
+}
+.atn {
+  color: #e0e2e4;
+}
+.atv {
+  color: #002bec;
+}
+.dec {
+  color: purple;
+}
+pre.prettyprint {
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  border: 1px solid rgba(255, 255, 255, 0.275);
+}
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.prettyprint {
+  background: #bcbcbc;
+}
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  color: #555;
+  list-style-type: decimal;
+}
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  background: #111;
+}
+@media print {
+  .str {
+    color: #060;
+  }
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .lit {
+    color: #044;
+  }
+  .pun {
+    color: #440;
+  }
+  .pln {
+    color: #000;
+  }
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .atn {
+    color: #404;
+  }
+  .atv {
+    color: #060;
+  }
+}
