@@ -3,81 +3,87 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/x-icon" href="pic/favicon.ico" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
       rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
-      rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura&display=swap"
+      rel="stylesheet" />
     <link href="css/codestyle.css" rel="stylesheet" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
   </head>
   <body>
     <header>
       <div class="icon">
-        <a href="index.html"><img src="pic/avatar.png" alt="Avatar" /></a>
+        <a href="index.html"> <img src="pic/avatar.png" alt="Avatar" /></a>
       </div>
       <div class="avatar">
         <img src="pic/logo.png" alt="logo" />
       </div>
       <nav>
         <div class="dropdown flex1">
-          <script src="js/dropdown.js"></script>
           <button onclick="toggleShowClass()" class="dropbtn">Menu</button>
           <div id="myDropdown" class="dropdown-content">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
             <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <div class="gridBlockContainer">
-        <div class="mainBlock">
-          <h1>Test</h1>
+      <div class="mainFlex">
+        <img id="background" src="pic/index.jpg" alt="Background" />
+        <div class="gridContainerLeft">
+          <div id="mainBlockLeft" class="mainBlockLeft">
+            <img id="discord" src="pic/discord.svg" alt="Discord" />
+            <img
+              id="discordAvatar"
+              src="pic/discordAvatar.svg"
+              alt="discordAvatar" />
+            <h3>JorranMLGN #8889</h3>
+          </div>
         </div>
-        <div class="textBlockJM">
-          <h3>Lorem ipsum dolor</h3>
+        <div class="gridContainerMid">
+          <div id="mainBlockMidText" class="mainBlockMidText">
+            <h1>Software Developer</h1>
+          </div>
+          <div id="mainBlockMid" class="mainBlockMid">
+            <h2>Me</h2>
+            <h3>Jorran Houkes</h3>
+            <h3>19 Y/O</h3>
+            <h3>Millingen a/d Rijn</h3>
+          </div>
         </div>
-        <div class="mainBlock2">
-          <h1>Test</h1>
-        </div>
-        <div class="textBlockJS">
-          <h3>Lorem ipsum dolor</h3>
+        <div class="gridContainerRight">
+          <div id="mainBlockRight" class="mainBlockRight">
+            <h2>Coding Languages</h2>
+            <h3>HTML</h3>
+            <h3>CSS</h3>
+            <h3>JAVA</h3>
+          </div>
         </div>
       </div>
     </main>
     <footer>
-      <p>© Jorran - Niet bedoelt voor reproductie!</p>
+      <p>© Jorran - Not intended for reproduction!</p>
     </footer>
   </body>
+  <script src="js/anime.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/animation.js"></script>
 </html>
