@@ -2,6 +2,9 @@ var blockLeft = document.getElementById("mainBlockLeft");
 var blockMid = document.getElementById("mainBlockMid");
 var blockRight = document.getElementById("mainBlockRight");
 var background = document.getElementById("background");
+var backgroundPhone = document.getElementById("backgroundPhone");
+
+backgroundPhone;
 var mainText = document.getElementById("mainBlockMidText");
 var backPatternId = document.getElementById("backPatternId");
 
@@ -33,7 +36,7 @@ function springIn(element, valuePos, timeDelay, durationOpacity = 800) {
   }
 }
 anime({
-  targets: background,
+  targets: (background, backgroundPhone),
   scale: {
     value: [0.8, 1],
     easing: "cubicBezier(0.770, 0.000, 0.175, 1.500)",
@@ -42,9 +45,23 @@ anime({
   easing: "cubicBezier(0.770, 0.000, 0.175, 1.000)",
 });
 
-window.onload = springIn(blockLeft, -50, (timeDelay = 1000));
-window.onload = springIn(blockMid, 50, 1000);
-window.onload = springIn(blockRight, 50, 1000);
-window.onload = springIn(mainText, 50, 1000);
+function myFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    window.onload = springIn(blockLeft, -50, (timeDelay = 1000));
+    window.onload = springIn(blockMid, 50, 1000);
+    window.onload = springIn(blockRight, 50, 1000);
+    window.onload = springIn(mainText, 50, 1000);
+  } else {
+    window.onload = springIn(blockLeft, -50, (timeDelay = 1000));
+    window.onload = springIn(blockMid, 50, 1000);
+    window.onload = springIn(blockRight, 50, 1000);
+    window.onload = springIn(mainText, 50, 1000);
+  }
+}
+var x = window.matchMedia("(max-width: 600px)");
+
+myFunction(x);
+x.addListener(myFunction);
 
 window.onload = springIn(backPatternId, 0, 0, 2000);
