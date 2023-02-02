@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Contact</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
@@ -42,7 +43,7 @@
       </nav>
     </header>
     <div id="backPatternId" class="backPattern"></div>
-    <div class="relative px-12 mt-0 sm:mt-14">
+    <div class="relative px-12 sm:mt-14">
       <div class="absolute inset-0">
         <div class="absolute inset-y-0 left-0 w-1/2"></div>
       </div>
@@ -57,7 +58,7 @@
               Enter your information here so we can contact you as soon as
               possible!
             </p>
-            <dl class="mt-8 text-base text-gray-300">
+            <dl class="mt-2 text-base text-gray-300">
               <div>
                 <dt class="sr-only">Postal address</dt>
                 <dd>
@@ -109,7 +110,10 @@
         <div
           class="bg-gray-9 00 rounded-xl sm:py-16 px-4 sm:px-6 lg:col-span-3 lg:py-20 lg:px-8 xl:pl-12">
           <div class="mx-auto max-w-lg lg:max-w-none">
-            <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
+            <form
+              action="#"
+              method="POST"
+              class="grid grid-cols-1 gap-y-2 sm:gap-y-6">
               <div>
                 <label for="full-name" class="sr-only">Full-name</label>
                 <input
@@ -145,11 +149,11 @@
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows="3"
                   class="block w-full rounded-md border-gray-300 py-1 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   placeholder="Message"></textarea>
               </div>
-              <div>
+              <div class="pb-10">
                 <button
                   type="button"
                   class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-6 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -164,6 +168,6 @@
     <footer>
       <p>© Jorran - Not intended for reproduction!</p>
     </footer>
+    <script src="js/animemin.js"></script>
   </body>
-  <script src="js/anime.min.js"></script>
 </html>

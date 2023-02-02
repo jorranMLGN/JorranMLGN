@@ -167,7 +167,6 @@ h2 {
 h3 {
   font-size: 15px;
   padding: 5%;
-  /* text-shadow: 2px 2px 3px #5dcee2; */
 }
 
 /* De footer balk die onder aan de pagina hangt */
@@ -336,7 +335,6 @@ button:hover {
 #masterPanelId,
 #scriptPanelId p {
   padding: 20px;
-  /* font-size: large; */
 }
 
 .discordWrapper {
@@ -443,10 +441,6 @@ pre {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    overflow: hidden;
-  }
-
   .mainFlex {
     flex-direction: column;
   }
@@ -568,12 +562,13 @@ pre {
 
   .backPattern {
     height: 50%;
-    margin-top: 200px;
+    margin-top: 100px;
     z-index: -1;
   }
   .showcaseSliderClass {
     width: fit-content;
     align-self: stretch;
+    justify-self: center;
   }
   .showcaseSliderClass button {
     background-color: #12164900;
@@ -591,15 +586,13 @@ pre {
     width: 80%;
   }
 
-  .gridBlockContainer div p {
+  .gridBlockContainer .discordPanel p {
     padding: 10px;
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
-
-  #discordPanelId {
-    height: 80%;
-    grid-column: 3;
-    grid-row: 6;
+  .gridBlockContainer .scriptPanel,
+  .mastermindPanel p {
+    font-size: 2.5vw;
   }
 
   .discordWrapper {
@@ -607,32 +600,44 @@ pre {
     flex-direction: row;
   }
 
+  #discordPanelId {
+    height: 80%;
+    grid-column: 3;
+    grid-row: 6;
+    width: auto;
+  }
   #masterPanelId {
     height: 80%;
+    width: auto;
     grid-row: 6;
   }
   #scriptPanelId {
     grid-row: 6;
     height: 90%;
+    width: auto;
   }
 
   #discordProjectSVG {
     width: 100%;
     margin: auto;
-    /* margin-left: 20px; */
+    margin-left: -20px;
     top: -100px;
   }
 
   #autoTouch {
     width: 70%;
     margin: auto;
-    margin-left: 20px;
+    margin-left: 25px;
     top: -100px;
   }
   #mastermindPic {
     width: 70%;
     margin: auto;
-    margin-left: 20px;
+    margin-left: 10px;
     top: -100px;
+  }
+
+  .relative {
+    margin-top: -20px;
   }
 }
