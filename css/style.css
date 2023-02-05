@@ -210,7 +210,15 @@ h3 {
   width: 100%;
   height: 100%;
   z-index: 2;
-  overflow: hidden;
+}
+
+.mainFlex div div p {
+  font-size: 10px;
+  padding: 10px;
+  font-family: "Jura", sans-serif;
+  text-align: center;
+  margin: auto;
+  color: #ffffff;
 }
 .gridContainerLeft {
   grid-template-columns: 30% 70%;
@@ -231,6 +239,7 @@ h3 {
   grid-column: 1;
   grid-row: 3;
   backdrop-filter: blur(20px);
+  overflow-y: scroll;
 }
 
 .mainBlockMid h1 {
@@ -251,6 +260,7 @@ h3 {
   grid-column: 1;
   grid-row: 2;
   backdrop-filter: blur(20px);
+  overflow-y: scroll;
 }
 
 .gridBlockContainer {
