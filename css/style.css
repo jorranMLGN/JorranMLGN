@@ -213,7 +213,7 @@ h3 {
 }
 
 .mainFlex div div p {
-  font-size: 10px;
+  font-size: 15px;
   padding: 10px;
   font-family: "Jura", sans-serif;
   text-align: center;
@@ -453,6 +453,10 @@ pre {
 @media only screen and (max-width: 600px) {
   .mainFlex {
     flex-direction: column;
+  }
+
+  .mainFlex div div p {
+    font-size: 10px;
   }
   .gridContainerLeft {
     grid-template-columns: 50% 140%;
