@@ -1,6 +1,6 @@
 # Hi there, I'm Jorran 👋
 
-![GitHub Profile Banner]((https://github.com/jorranMLGN/portofolio_site/assets/25855356/0c3ef7b7-b1ff-44e6-852b-020c625bd9ec))
+![GitHub Profile Banner]((https://media.licdn.com/dms/image/D4E16AQEHKew2d_WMwg/profile-displaybackgroundimage-shrink_350_1400/0/1684264426675?e=1699488000&v=beta&t=DsBH_Z0yJs_pQChhB7wd7TVcdppzhnHSjx3cC8vy7YM))
 
 I'm a passionate [Your Occupation] from [Your Location]. I love to code and contribute to open-source projects. Here you'll find some of my projects and contributions.
 
