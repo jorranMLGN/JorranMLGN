@@ -2,12 +2,13 @@
 
 ![GitHub Profile Banner](https://github.com/jorranMLGN/JorranMLGN/blob/main/banner.png?raw=true)
 
-I'm a passionate Software engineer from The Netherlands. I love to code and contribute to open-source projects. Here you'll find some of my projects and contributions.
+I'm a passionate Software engineer from The Netherlands.
+Currently expanding my knowledge about AI.
 
 ## 🔧 Technologies & Tools
 
-- 💻 Languages: Java, HTML, CSS and JavaScript
-- 🛠️ Frameworks & Libraries: Prisma, NextJS and Tailwind 
+- 💻 Languages: Typescript, JavaScript, C# and Rust
+- 🛠️ Frameworks & Libraries: Prisma, NextJS, Supabase and Tailwind-CSS
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ![jorranmlgn's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jorranmlgn&theme=solarized-dark&show_icons=true&hide_border=true&layout=compact)
